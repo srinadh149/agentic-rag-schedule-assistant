@@ -349,7 +349,8 @@ Rules:
 
 
 # ---------- UI ----------
-_index_status = initialize()
+_index_status = {"ok": True, "error": None}
+
 
 st.title("📅 Agentic RAG Schedule Assistant")
 st.caption("30-day schedule management with ChromaDB retrieval + agentic tool calling")
