@@ -1,0 +1,162 @@
+[
+  {
+    "id": "evt001",
+    "title": "Team Stand-up",
+    "type": "meeting",
+    "date": "2026-08-17",
+    "start_time": "09:30",
+    "end_time": "10:00",
+    "location": "Online",
+    "description": "Daily project stand-up with the development team."
+  },
+  {
+    "id": "evt002",
+    "title": "Python Workshop",
+    "type": "workshop",
+    "date": "2026-08-18",
+    "start_time": "16:00",
+    "end_time": "18:00",
+    "location": "Lab 2",
+    "description": "Hands-on Python and data analysis workshop."
+  },
+  {
+    "id": "evt003",
+    "title": "DBMS Assignment",
+    "type": "task",
+    "date": "2026-08-19",
+    "start_time": "17:00",
+    "end_time": "18:30",
+    "location": "Home",
+    "description": "Complete normalization and SQL queries assignment."
+  },
+  {
+    "id": "evt004",
+    "title": "Project Guide Meeting",
+    "type": "meeting",
+    "date": "2026-08-20",
+    "start_time": "11:00",
+    "end_time": "12:00",
+    "location": "College",
+    "description": "Discuss project progress and next milestones."
+  },
+  {
+    "id": "evt005",
+    "title": "Doctor Appointment",
+    "type": "appointment",
+    "date": "2026-08-21",
+    "start_time": "15:00",
+    "end_time": "16:00",
+    "location": "City Clinic",
+    "description": "Routine appointment."
+  },
+  {
+    "id": "evt006",
+    "title": "RAG Project Work",
+    "type": "task",
+    "date": "2026-08-22",
+    "start_time": "10:00",
+    "end_time": "12:00",
+    "location": "Home",
+    "description": "Implement retrieval and tool-calling workflow."
+  },
+  {
+    "id": "evt007",
+    "title": "AI Seminar",
+    "type": "workshop",
+    "date": "2026-08-24",
+    "start_time": "13:00",
+    "end_time": "15:00",
+    "location": "Seminar Hall",
+    "description": "Seminar on practical generative AI applications."
+  },
+  {
+    "id": "evt008",
+    "title": "Placement Preparation",
+    "type": "task",
+    "date": "2026-08-25",
+    "start_time": "18:00",
+    "end_time": "19:30",
+    "location": "Home",
+    "description": "Practice aptitude and coding questions."
+  },
+  {
+    "id": "evt009",
+    "title": "Sprint Planning",
+    "type": "meeting",
+    "date": "2026-08-27",
+    "start_time": "10:30",
+    "end_time": "11:30",
+    "location": "Online",
+    "description": "Plan tasks for the next project sprint."
+  },
+  {
+    "id": "evt010",
+    "title": "Cloud Deployment Workshop",
+    "type": "workshop",
+    "date": "2026-08-29",
+    "start_time": "11:00",
+    "end_time": "13:00",
+    "location": "Computer Lab",
+    "description": "Deploy a Streamlit application to the cloud."
+  },
+  {
+    "id": "evt011",
+    "title": "Project Demo",
+    "type": "meeting",
+    "date": "2026-09-01",
+    "start_time": "15:00",
+    "end_time": "16:00",
+    "location": "College",
+    "description": "Demonstrate the Agentic RAG Schedule Assistant."
+  },
+  {
+    "id": "evt012",
+    "title": "Submit Documentation",
+    "type": "task",
+    "date": "2026-09-03",
+    "start_time": "16:00",
+    "end_time": "17:00",
+    "location": "Online",
+    "description": "Submit project report and documentation."
+  },
+  {
+    "id": "evt013",
+    "title": "Career Workshop",
+    "type": "workshop",
+    "date": "2026-09-05",
+    "start_time": "10:00",
+    "end_time": "12:00",
+    "location": "Auditorium",
+    "description": "Resume and interview preparation workshop."
+  },
+  {
+    "id": "evt014",
+    "title": "Dentist Appointment",
+    "type": "appointment",
+    "date": "2026-09-08",
+    "start_time": "12:00",
+    "end_time": "13:00",
+    "location": "Dental Care Center",
+    "description": "Routine dental check-up."
+  },
+  {
+    "id": "evt015",
+    "title": "Final Project Review",
+    "type": "meeting",
+    "date": "2026-09-10",
+    "start_time": "14:30",
+    "end_time": "15:30",
+    "location": "Online",
+    "description": "Final review with the project team."
+  },
+  {
+    "id": "evt_4a8f9387",
+    "title": "Meeting",
+    "type": "meeting",
+    "date": "2026-08-20",
+    "start_time": "15:00",
+    "end_time": "16:00",
+    "location": "Not specified",
+    "description": ""
+  }
+]

@@ -1,0 +1,24 @@
+ARCHITECTURE
+
+User
+  |
+  v
+Streamlit UI
+  |
+  v
+Gemini Agent (tool calling)
+  |-----------------------------|
+  |                             |
+  v                             v
+get_schedule                 update_schedule
+  |                             |
+  v                             v
+ChromaDB Vector DB          schedule.json
+  |                             |
+  v                             v
+Relevant schedule         Add / Update / Remove
+  |                             |
+  +-------------+---------------+
+                |
+                v
+        Natural-language response
