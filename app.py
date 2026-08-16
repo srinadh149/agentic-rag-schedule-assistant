@@ -230,21 +230,81 @@ def update_schedule(action, event_id=None, title=None, event_type="meeting",
 
 
 # ---------- Gemini Agent ----------
+# ---------- Gemini Agent ----------
 GEMINI_TOOLS = [
-    types.Tool(function_declarations=[
-        {
-            "name": "get_schedule",
-            "description": "Retrieve schedule events relevant to a user's date, time range, or natural-language query. Use this for questions about availability or existing events.",
-            "parameters": {
-                "type": "OBJECT",
-                "properties": {
-                    "query": {"type": "STRING", "description": "Natural-language search query."},
-                    "target_date": {"type": "STRING", "description": "Exact date in YYYY-MM-DD if known."},
-                    "start_time": {"type": "STRING", "description": "Optional range start in HH:MM."},
-                    "end_time": {"type": "STRING", "description": "Optional range end in HH:MM."},
-                },
+    types.Tool(
+        function_declarations=[
+            {
+                "name": "get_schedule",
+                "description": "Retrieve schedule events relevant to a user's date, time range, or natural-language query.",
+                "parameters": {
+                    "type": "OBJECT",
+                    "properties": {
+                        "query": {
+                            "type": "STRING",
+                            "description": "Natural-language search query."
+                        },
+                        "target_date": {
+                            "type": "STRING",
+                            "description": "Exact date in YYYY-MM-DD if known."
+                        },
+                        "start_time": {
+                            "type": "STRING",
+                            "description": "Optional range start in HH:MM."
+                        },
+                        "end_time": {
+                            "type": "STRING",
+                            "description": "Optional range end in HH:MM."
+                        }
+                    }
+                }
             },
-        },
+            {
+                "name": "update_schedule",
+                "description": "Add, update, or remove a schedule entry. Use only when the user explicitly asks to change the schedule.",
+                "parameters": {
+                    "type": "OBJECT",
+                    "properties": {
+                        "action": {
+                            "type": "STRING",
+                            "enum": ["add", "update", "remove"]
+                        },
+                        "event_id": {
+                            "type": "STRING"
+                        },
+                        "title": {
+                            "type": "STRING"
+                        },
+                        "event_type": {
+                            "type": "STRING",
+                            "enum": ["meeting", "workshop", "task", "appointment"]
+                        },
+                        "event_date": {
+                            "type": "STRING",
+                            "description": "YYYY-MM-DD"
+                        },
+                        "start_time": {
+                            "type": "STRING",
+                            "description": "HH:MM, 24-hour time"
+                        },
+                        "end_time": {
+                            "type": "STRING",
+                            "description": "HH:MM, 24-hour time"
+                        },
+                        "location": {
+                            "type": "STRING"
+                        },
+                        "description": {
+                            "type": "STRING"
+                        }
+                    },
+                    "required": ["action"]
+                }
+            }
+        ]
+    )
+]
+
         {
             "name": "update_schedule",
             "description": "Add, update, or remove a schedule entry. Use only when the user explicitly asks to change the schedule.",
