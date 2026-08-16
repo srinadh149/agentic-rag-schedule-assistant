@@ -1,6 +1,7 @@
 import os
 import json
 import uuid
+import hashlib
 from datetime import datetime, date, timedelta
 from pathlib import Path
 
@@ -30,12 +31,34 @@ def save_schedule(events):
 
 @st.cache_resource
 def get_collection():
-    client = chromadb.Client(chromadb.config.Settings(anonymized_telemetry=False))
+    client = chromadb.Client(
+        chromadb.config.Settings(anonymized_telemetry=False)
+    )
+
+    def embedding_function(texts):
+        embeddings = []
+
+        for text in texts:
+            digest = hashlib.sha256(text.encode("utf-8")).digest()
+
+            # Create a deterministic 128-dimensional vector.
+            vector = [
+                (digest[i % len(digest)] / 255.0)
+                for i in range(128)
+            ]
+
+            embeddings.append(vector)
+
+        return embeddings
+
     collection = client.get_or_create_collection(
         name=COLLECTION_NAME,
-        metadata={"hnsw:space": "cosine"}
+        metadata={"hnsw:space": "cosine"},
+        embedding_function=embedding_function
     )
+
     return collection
+
 
 
 def event_text(e):
